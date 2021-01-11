@@ -4,14 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SingleMethodTestCase {
-    private List<String> methods;
+    private List<TestMethod> methods_temp;
+
+    public void method1() {
+
+    }
 
     public SingleMethodTestCase() {
-        methods = new ArrayList<>();
-        methods.add("method1");
+        methods_temp = new ArrayList<>();
+        methods_temp.add(new TestMethod("method1", this::method1));
     }
 
-    public List<String> getMethods() {
-        return methods;
+    public List<TestMethod> getMethods() {
+        return methods_temp;
     }
+
 }
