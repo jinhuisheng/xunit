@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class XunitTest {
     @Test
-    void should_get_single_method_testClass_methods_success() {
+    void should_get_single_method_testCase_methods_success() {
         Xunit xunit = new Xunit();
         List<TestMethod> methods = xunit.getMethods(new SingleMethodTestCase());
         assertThat(methods.size()).isEqualTo(1);
@@ -18,7 +18,7 @@ public class XunitTest {
     }
 
     @Test
-    void should_get_two_methods_testClass_methods_success() {
+    void should_get_two_methods_testCase_methods_success() {
         Xunit xunit = new Xunit();
         List<TestMethod> methods = xunit.getMethods(new TwoMethodTestCase());
         assertThat(methods.size()).isEqualTo(2);
