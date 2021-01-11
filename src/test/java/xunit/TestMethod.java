@@ -12,4 +12,8 @@ public class TestMethod {
     public void run() {
         method.run();
     }
+
+    public String getName() {
+        return name;
+    }
 }

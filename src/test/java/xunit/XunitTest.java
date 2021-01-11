@@ -10,8 +10,10 @@ public class XunitTest {
     @Test
     void should_get_testClass_methods_success() {
         Xunit xunit = new Xunit();
-        List<TestMethod> functions = xunit.getMethods(new SingleMethodTestCase());
-        assertThat(functions.size()).isEqualTo(1);
-        functions.get(0).run();
+        List<TestMethod> methods = xunit.getMethods(new SingleMethodTestCase());
+        assertThat(methods.size()).isEqualTo(1);
+        TestMethod firstMethod = methods.get(0);
+        assertThat(firstMethod.getName()).isNotBlank();
+        firstMethod.run();
     }
 }
