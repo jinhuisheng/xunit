@@ -8,12 +8,29 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class XunitTest {
     @Test
-    void should_get_testClass_methods_success() {
+    void should_get_single_method_testClass_methods_success() {
         Xunit xunit = new Xunit();
         List<TestMethod> methods = xunit.getMethods(new SingleMethodTestCase());
         assertThat(methods.size()).isEqualTo(1);
-        TestMethod firstMethod = methods.get(0);
-        assertThat(firstMethod.getName()).isNotBlank();
-        firstMethod.run();
+        TestMethod method = methods.get(0);
+        assertThat(method.getName()).isNotBlank();
+        method.run();
     }
+
+//    @Test
+//    void should_get_two_methods_testClass_methods_success() {
+//        Xunit xunit = new Xunit();
+//        List<TestMethod> methods = xunit.getMethods(new TwoMethodTestCase());
+//
+//        assertThat(methods.size()).isEqualTo(2);
+//        TestMethod firstMethod = methods.get(0);
+//        assertThat(firstMethod.getName()).isNotBlank();
+//        firstMethod.run();
+//
+//        TestMethod secondMethod = methods.get(1);
+//        assertThat(secondMethod.getName()).isNotBlank();
+//        secondMethod.run();
+//
+//    }
+
 }
