@@ -1,11 +1,6 @@
 package xunit.testcaseexecute;
 
 import xunit.RTWTestCase;
-import xunit.TestMethod;
-import xunit.TestResult;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -18,12 +13,4 @@ public class ExecuteFailMethodTestCase extends RTWTestCase {
         this.registerMethod("test1", this::test1);
     }
 
-    public List<TestResult> executeMethods() {
-        List<TestResult> testResults = new ArrayList<>();
-        for (TestMethod declaredMethod : this.getDeclaredMethods()) {
-            TestResult result = declaredMethod.run();
-            testResults.add(result);
-        }
-        return testResults;
-    }
 }
