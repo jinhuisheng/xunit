@@ -1,4 +1,6 @@
-package xunit;
+package xunit.testcase;
+
+import xunit.RTWTestCase;
 
 public class SingleMethodTestCase extends RTWTestCase {
 

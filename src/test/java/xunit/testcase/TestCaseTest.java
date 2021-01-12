@@ -1,6 +1,7 @@
-package xunit;
+package xunit.testcase;
 
 import org.junit.jupiter.api.Test;
+import xunit.TestMethod;
 
 import java.util.List;
 
