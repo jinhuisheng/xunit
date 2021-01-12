@@ -1,5 +1,6 @@
 package xunit.testcaseexecute;
 
+import xunit.Constants;
 import xunit.RTWTestCase;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -10,7 +11,7 @@ public class ExecuteFailMethodTestCase extends RTWTestCase {
     }
 
     public ExecuteFailMethodTestCase() {
-        this.registerMethod("test1", this::test1);
+        this.registerMethod(Constants.TEST_1_METHOD_NAME, this::test1);
     }
 
 }
