@@ -5,6 +5,7 @@ public class TestMethod {
     private final Runnable method;
 
     public TestMethod(String name, Runnable method) {
+
         this.name = name;
         this.method = method;
     }
@@ -16,4 +17,5 @@ public class TestMethod {
     public String getName() {
         return name;
     }
+
 }

@@ -3,7 +3,7 @@ package xunit;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestCase {
+public class RTWTestCase {
     private List<TestMethod> methods = new ArrayList<>();
 
     protected void registerMethod(String name, Runnable method) {

@@ -11,15 +11,16 @@
 ### 任务分解
 
 n. 
-xunit
-test class
-test clas function
+XxxTestCase 测试类
 
 v.
-getFunctions
+getDeclaredMethods
 
+### 测试用例
 
-获取测试类的一个测试方法
+获取没有方法测试类的一个测试方法,测试方法数量为0
 
-获取测试类的一组测试方法
+获取单方法测试类的一个测试方法,测试方法数量为1,并且可调用
+
+获取多个方法(3个)的测试类的一组测试方法,测试方法数量为3,并且可调用
 
