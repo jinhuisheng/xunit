@@ -29,4 +29,20 @@ public class TestCaseExecuteTest {
         assertThat(testResult.getFailureMessage()).containsSequence("Expecting:\n");
     }
 
+    @Test
+    void execute_test_class_have_success_and_failure_test() {
+        ExecuteMultipleMethodTestCase testCase = new ExecuteMultipleMethodTestCase();
+        List<TestResult> results = testCase.executeMethods();
+        assertThat(results.size()).isEqualTo(2);
+        TestResult testResult = results.get(0);
+        assertThat(testResult.getMethodName()).isEqualTo("test1");
+        assertThat(testResult.getSuccess()).isFalse();
+        assertThat(testResult.getFailureMessage()).containsSequence("Expecting:\n");
+        TestResult testResult2 = results.get(1);
+        assertThat(testResult2.getMethodName()).isEqualTo("test2");
+        assertThat(testResult2.getSuccess()).isTrue();
+        assertThat(testResult2.getFailureMessage()).isEmpty();
+
+    }
+
 }
