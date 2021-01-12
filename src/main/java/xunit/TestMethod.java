@@ -1,5 +1,7 @@
 package xunit;
 
+import java.util.List;
+
 public class TestMethod {
     private final String name;
     private final Runnable method;
@@ -10,8 +12,13 @@ public class TestMethod {
         this.method = method;
     }
 
-    public void run() {
-        method.run();
+    public TestResult run() {
+        try {
+            method.run();
+            return null;
+        } catch (AssertionError e) {
+            return new TestResult(name, false, e.getMessage());
+        }
     }
 
     public String getName() {

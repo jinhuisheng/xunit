@@ -16,4 +16,16 @@ public class TestCaseExecuteTest {
         assertThat(testResult.getMethodName()).isNotBlank();
         assertThat(testResult.getSuccess()).isTrue();
     }
+
+    @Test
+    void execute_one_failure_test() {
+        ExecuteFailMethodTestCase testCase = new ExecuteFailMethodTestCase();
+        List<TestResult> results = testCase.executeMethods();
+        assertThat(results.size()).isEqualTo(1);
+        TestResult testResult = results.get(0);
+        assertThat(testResult.getMethodName()).isNotBlank();
+        assertThat(testResult.getSuccess()).isFalse();
+        assertThat(testResult.getFailureMessage()).containsSequence("Expecting:\n");
+    }
+
 }
