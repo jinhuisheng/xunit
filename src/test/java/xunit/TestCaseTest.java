@@ -10,14 +10,14 @@ public class TestCaseTest {
     @Test
     void no_method_test_class_has_empty_method() {
         NoMethodTestCase noMethodTestCase = new NoMethodTestCase();
-        List<TestMethod> methods = noMethodTestCase.getMethods();
+        List<TestMethod> methods = noMethodTestCase.getDeclaredMethods();
         assertThat(methods.size()).isEqualTo(0);
     }
 
     @Test
     void single_method_test_class_has_one_method() {
         SingleMethodTestCase singleMethodTestCase = new SingleMethodTestCase();
-        List<TestMethod> methods = singleMethodTestCase.getMethods();
+        List<TestMethod> methods = singleMethodTestCase.getDeclaredMethods();
         assertThat(methods.size()).isEqualTo(1);
         TestMethod testMethod = methods.get(0);
         assertThat(testMethod.getName()).isNotEmpty();
@@ -27,7 +27,7 @@ public class TestCaseTest {
     @Test
     void three_methods_test_class_has_3_methods() {
         ThreeMethodTestCase threeMethodTestCase = new ThreeMethodTestCase();
-        List<TestMethod> methods = threeMethodTestCase.getMethods();
+        List<TestMethod> methods = threeMethodTestCase.getDeclaredMethods();
         assertThat(methods.size()).isEqualTo(3);
         TestMethod testMethod = methods.get(0);
         assertThat(testMethod.getName()).isNotEmpty();

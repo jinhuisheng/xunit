@@ -10,7 +10,7 @@ public class RTWTestCase {
         methods.add(new TestMethod(name, method));
     }
 
-    public List<TestMethod> getMethods() {
+    public List<TestMethod> getDeclaredMethods() {
         return methods;
     }
 
