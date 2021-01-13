@@ -2,7 +2,6 @@ package xunit.testsuite;
 
 import org.junit.jupiter.api.Test;
 import xunit.testcase.TestResult;
-import xunit.TestUtil;
 import xunit.testcase.SingleMethodTestCase;
 import xunit.testcaseexecute.ExecuteMultipleMethodTestCase;
 
@@ -19,7 +18,7 @@ public class TestSuiteTest {
         List<TestClassResult> results = testSuite.execute();
         assertThat(results.size()).isEqualTo(1);
         TestClassResult testClassResult = results.get(0);
-        assertThat(testClassResult.getClassName()).isEqualTo(TestUtil.getClassName(SingleMethodTestCase.class));
+        assertThat(testClassResult.getClassName()).isEqualTo("xunit.testcase.SingleMethodTestCase");
         TestResult testMethodResult = testClassResult.getTestResults().get(0);
         assertThat(testMethodResult.getMethodName()).isEqualTo(EXECUTE_SUCCESS_TEST);
         assertThat(testMethodResult.getSuccess()).isEqualTo(true);
@@ -38,7 +37,7 @@ public class TestSuiteTest {
         TestClassResult secondTestClassResult = results.get(1);
         assertThat(secondTestClassResult.getTestResults().size()).isEqualTo(2);
         assertThat(secondTestClassResult.getClassName())
-                .isEqualTo(TestUtil.getClassName(ExecuteMultipleMethodTestCase.class));
+                .isEqualTo("xunit.testcaseexecute.ExecuteMultipleMethodTestCase");
 
         TestResult firstTestMethodResult = secondTestClassResult.getTestResults().get(0);
         assertThat(firstTestMethodResult.getMethodName()).isEqualTo(EXECUTE_FAILURE_TEST);

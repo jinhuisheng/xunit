@@ -1,7 +1,6 @@
 package xunit.testsuite;
 
 import xunit.testcase.RTWTestCase;
-import xunit.TestUtil;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,7 +17,7 @@ public class TestSuite {
     }
 
     private TestClassResult execute(RTWTestCase testCase) {
-        return new TestClassResult(TestUtil.getClassName(testCase.getClass()), testCase.executeMethods());
+        return new TestClassResult(testCase.getClass(), testCase.executeMethods());
     }
 
 }
