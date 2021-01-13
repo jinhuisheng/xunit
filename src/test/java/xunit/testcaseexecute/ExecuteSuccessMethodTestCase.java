@@ -12,7 +12,7 @@ public class ExecuteSuccessMethodTestCase extends RTWTestCase {
     }
 
     public ExecuteSuccessMethodTestCase() {
-        this.registerMethod(Constants.TEST_1_METHOD_NAME, this::test1);
+        this.registerMethod(Constants.EXECUTE_FAILURE_TEST, this::test1);
     }
 
 }

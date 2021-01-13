@@ -11,7 +11,7 @@ public class ExecuteFailMethodTestCase extends RTWTestCase {
     }
 
     public ExecuteFailMethodTestCase() {
-        this.registerMethod(Constants.TEST_1_METHOD_NAME, this::test1);
+        this.registerMethod(Constants.EXECUTE_FAILURE_TEST, this::test1);
     }
 
 }

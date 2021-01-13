@@ -1,7 +1,6 @@
 package xunit.testsuite;
 
 import org.junit.jupiter.api.Test;
-import xunit.Constants;
 import xunit.TestResult;
 import xunit.TestUtil;
 import xunit.testcase.SingleMethodTestCase;
@@ -10,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static xunit.Constants.*;
 
 public class TestSuiteTest {
     @Test
@@ -20,7 +20,7 @@ public class TestSuiteTest {
         TestClassResult testClassResult = results.get(0);
         assertThat(testClassResult.getClassName()).isEqualTo(TestUtil.getClassName(SingleMethodTestCase.class));
         TestResult testMethodResult = testClassResult.getTestResults().get(0);
-        assertThat(testMethodResult.getMethodName()).isEqualTo(Constants.TEST_1_METHOD_NAME);
+        assertThat(testMethodResult.getMethodName()).isEqualTo(EXECUTE_SUCCESS_TEST);
         assertThat(testMethodResult.getSuccess()).isEqualTo(true);
     }
 }

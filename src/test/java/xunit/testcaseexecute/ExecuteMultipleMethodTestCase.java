@@ -15,7 +15,7 @@ public class ExecuteMultipleMethodTestCase extends RTWTestCase {
     }
 
     public ExecuteMultipleMethodTestCase() {
-        this.registerMethod(Constants.TEST_1_METHOD_NAME, this::test1);
-        this.registerMethod(Constants.TEST_2_METHOD_NAME, this::test2);
+        this.registerMethod(Constants.EXECUTE_FAILURE_TEST, this::test1);
+        this.registerMethod(Constants.EXECUTE_SUCCESS_TEST, this::test2);
     }
 }

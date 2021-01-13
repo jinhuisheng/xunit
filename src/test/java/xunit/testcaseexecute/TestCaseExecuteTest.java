@@ -16,7 +16,7 @@ public class TestCaseExecuteTest {
         List<TestResult> results = testCase.executeMethods();
         assertThat(results.size()).isEqualTo(1);
         TestResult testResult = results.get(0);
-        assertThat(testResult.getMethodName()).isEqualTo(TEST_1_METHOD_NAME);
+        assertThat(testResult.getMethodName()).isEqualTo(EXECUTE_FAILURE_TEST);
         assertThat(testResult.getSuccess()).isTrue();
     }
 
@@ -26,7 +26,7 @@ public class TestCaseExecuteTest {
         List<TestResult> results = testCase.executeMethods();
         assertThat(results.size()).isEqualTo(1);
         TestResult testResult = results.get(0);
-        assertThat(testResult.getMethodName()).isEqualTo(TEST_1_METHOD_NAME);
+        assertThat(testResult.getMethodName()).isEqualTo(EXECUTE_FAILURE_TEST);
         assertThat(testResult.getSuccess()).isFalse();
         assertThat(testResult.getFailureMessage()).containsSequence(EXPECTING_FAILURE_MSG_PREFIX);
     }
@@ -37,11 +37,11 @@ public class TestCaseExecuteTest {
         List<TestResult> results = testCase.executeMethods();
         assertThat(results.size()).isEqualTo(2);
         TestResult testResult = results.get(0);
-        assertThat(testResult.getMethodName()).isEqualTo(TEST_1_METHOD_NAME);
+        assertThat(testResult.getMethodName()).isEqualTo(EXECUTE_FAILURE_TEST);
         assertThat(testResult.getSuccess()).isFalse();
         assertThat(testResult.getFailureMessage()).containsSequence(EXPECTING_FAILURE_MSG_PREFIX);
         TestResult testResult2 = results.get(1);
-        assertThat(testResult2.getMethodName()).isEqualTo(TEST_2_METHOD_NAME);
+        assertThat(testResult2.getMethodName()).isEqualTo(EXECUTE_SUCCESS_TEST);
         assertThat(testResult2.getSuccess()).isTrue();
         assertThat(testResult2.getFailureMessage()).isEmpty();
     }
