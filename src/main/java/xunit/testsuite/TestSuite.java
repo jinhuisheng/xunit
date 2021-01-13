@@ -13,7 +13,9 @@ public class TestSuite {
     }
 
     public List<TestClassResult> execute() {
-        return testCases.stream().map(testCase -> new TestClassResult()).collect(Collectors.toList());
+        return testCases.stream()
+                .map(testCase -> new TestClassResult(testCase.getClass().toString().split(" ")[1]))
+                .collect(Collectors.toList());
     }
 
 }
