@@ -1,6 +1,7 @@
 package xunit.testsuite;
 
 import xunit.RTWTestCase;
+import xunit.TestUtil;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,13 +14,11 @@ public class TestSuite {
     }
 
     public List<TestClassResult> execute() {
-        return testCases.stream()
-                .map(testCase -> new TestClassResult(getClassName(testCase), testCase.executeMethods()))
-                .collect(Collectors.toList());
+        return testCases.stream().map(this::execute).collect(Collectors.toList());
     }
 
-    private String getClassName(RTWTestCase testCase) {
-        return testCase.getClass().toString().split(" ")[1];
+    private TestClassResult execute(RTWTestCase testCase) {
+        return new TestClassResult(TestUtil.getClassName(testCase.getClass()), testCase.executeMethods());
     }
 
 }

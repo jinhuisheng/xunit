@@ -1,6 +1,9 @@
 package xunit.testsuite;
 
 import org.junit.jupiter.api.Test;
+import xunit.Constants;
+import xunit.TestResult;
+import xunit.TestUtil;
 import xunit.testcase.SingleMethodTestCase;
 
 import java.util.Arrays;
@@ -14,8 +17,10 @@ public class TestSuiteTest {
         TestSuite testSuite = new TestSuite(Arrays.asList(new SingleMethodTestCase()));
         List<TestClassResult> results = testSuite.execute();
         assertThat(results.size()).isEqualTo(1);
-        assertThat(results.get(0).getClassName()).isEqualTo(SingleMethodTestCase.class.toString().split(" ")[1]);
-        assertThat(results.get(0).getTestResults().get(0).getMethodName()).isEqualTo("test1");
-        assertThat(results.get(0).getTestResults().get(0).getSuccess()).isEqualTo(true);
+        TestClassResult testClassResult = results.get(0);
+        assertThat(testClassResult.getClassName()).isEqualTo(TestUtil.getClassName(SingleMethodTestCase.class));
+        TestResult testMethodResult = testClassResult.getTestResults().get(0);
+        assertThat(testMethodResult.getMethodName()).isEqualTo(Constants.TEST_1_METHOD_NAME);
+        assertThat(testMethodResult.getSuccess()).isEqualTo(true);
     }
 }
