@@ -13,7 +13,7 @@ import static xunit.Constants.*;
 
 public class TestSuiteTest {
     @Test
-    void should_execute_and_get_right_test_class_result_count() {
+    void should_execute_success_with_one_test_class() {
         TestSuite testSuite = new TestSuite(Arrays.asList(new SingleMethodTestCase()));
         List<TestClassResult> results = testSuite.execute();
         assertThat(results.size()).isEqualTo(1);
