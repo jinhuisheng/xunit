@@ -1,7 +1,7 @@
 package xunit.testsuite;
 
 import org.junit.jupiter.api.Test;
-import xunit.TestResult;
+import xunit.testcase.TestResult;
 import xunit.TestUtil;
 import xunit.testcase.SingleMethodTestCase;
 import xunit.testcaseexecute.ExecuteMultipleMethodTestCase;

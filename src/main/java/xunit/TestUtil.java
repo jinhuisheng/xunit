@@ -1,5 +1,7 @@
 package xunit;
 
+import xunit.testcase.RTWTestCase;
+
 public class TestUtil {
     public TestUtil() {
     }

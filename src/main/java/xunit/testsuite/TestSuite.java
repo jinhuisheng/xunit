@@ -1,6 +1,6 @@
 package xunit.testsuite;
 
-import xunit.RTWTestCase;
+import xunit.testcase.RTWTestCase;
 import xunit.TestUtil;
 
 import java.util.List;

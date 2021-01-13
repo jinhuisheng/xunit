@@ -1,7 +1,5 @@
 package xunit.testcase;
 
-import xunit.RTWTestCase;
-
 public class ThreeMethodTestCase extends RTWTestCase {
     public void test1() {
 

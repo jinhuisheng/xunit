@@ -1,7 +1,5 @@
 package xunit.testcase;
 
-import xunit.RTWTestCase;
-
 import static xunit.Constants.EXECUTE_SUCCESS_TEST;
 
 public class SingleMethodTestCase extends RTWTestCase {

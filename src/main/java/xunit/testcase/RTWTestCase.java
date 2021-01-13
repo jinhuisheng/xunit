@@ -1,4 +1,4 @@
-package xunit;
+package xunit.testcase;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package xunit;
+package xunit.testcase;
 
 public class TestResult {
     private final String methodName;

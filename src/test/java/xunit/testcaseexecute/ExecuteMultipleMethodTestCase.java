@@ -1,7 +1,7 @@
 package xunit.testcaseexecute;
 
 import xunit.Constants;
-import xunit.RTWTestCase;
+import xunit.testcase.RTWTestCase;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

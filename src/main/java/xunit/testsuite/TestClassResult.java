@@ -1,6 +1,6 @@
 package xunit.testsuite;
 
-import xunit.TestResult;
+import xunit.testcase.TestResult;
 
 import java.util.List;
 
