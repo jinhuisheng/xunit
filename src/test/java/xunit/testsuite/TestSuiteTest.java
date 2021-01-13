@@ -15,5 +15,7 @@ public class TestSuiteTest {
         List<TestClassResult> results = testSuite.execute();
         assertThat(results.size()).isEqualTo(1);
         assertThat(results.get(0).getClassName()).isEqualTo(SingleMethodTestCase.class.toString().split(" ")[1]);
+        assertThat(results.get(0).getTestResults().get(0).getMethodName()).isEqualTo("test1");
+        assertThat(results.get(0).getTestResults().get(0).getSuccess()).isEqualTo(true);
     }
 }

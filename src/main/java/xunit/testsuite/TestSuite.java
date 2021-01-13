@@ -14,7 +14,7 @@ public class TestSuite {
 
     public List<TestClassResult> execute() {
         return testCases.stream()
-                .map(testCase -> new TestClassResult(getClassName(testCase)))
+                .map(testCase -> new TestClassResult(getClassName(testCase), testCase.executeMethods()))
                 .collect(Collectors.toList());
     }
 
