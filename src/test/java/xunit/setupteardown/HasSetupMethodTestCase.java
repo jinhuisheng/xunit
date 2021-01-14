@@ -11,7 +11,7 @@ public class HasSetupMethodTestCase extends RTWTestCase {
 
     @Override
     protected void setUp() {
-        list = Constants.LIST;
+        list = Constants.USED_IN_SETUP_LIST;
     }
 
     public void save1() {

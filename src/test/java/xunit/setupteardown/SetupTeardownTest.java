@@ -14,7 +14,7 @@ public class SetupTeardownTest {
         HasSetupMethodTestCase testCase = new HasSetupMethodTestCase();
         List<TestResult> testResults = testCase.executeMethods();
         assertThat(testResults.size()).isEqualTo(2);
-        assertThat(Constants.LIST.size()).isEqualTo(2);
+        assertThat(Constants.USED_IN_SETUP_LIST.size()).isEqualTo(2);
     }
 
     @Test
@@ -22,7 +22,7 @@ public class SetupTeardownTest {
         HasSetupAndTearDownMethodTestCase testCase = new HasSetupAndTearDownMethodTestCase();
         List<TestResult> testResults = testCase.executeMethods();
         assertThat(testResults.size()).isEqualTo(2);
-        assertThat(Constants.ANOTHER_LIST.size()).isEqualTo(0);
+        assertThat(Constants.USED_IN_SETUP_AND_TEARDOWN_LIST.size()).isEqualTo(0);
     }
 
 

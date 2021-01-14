@@ -11,7 +11,7 @@ public class HasSetupAndTearDownMethodTestCase extends RTWTestCase {
 
     @Override
     protected void setUp() {
-        list = Constants.ANOTHER_LIST;
+        list = Constants.USED_IN_SETUP_AND_TEARDOWN_LIST;
     }
 
     @Override
