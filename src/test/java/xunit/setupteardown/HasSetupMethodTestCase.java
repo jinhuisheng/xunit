@@ -18,8 +18,14 @@ public class HasSetupMethodTestCase extends RTWTestCase {
         assertThat(name).isEqualTo("setup");
     }
 
+    public void test2() {
+        assertThat(name).isEqualTo("setup");
+    }
+
+
     public HasSetupMethodTestCase() {
-        this.registerMethod(Constants.EXECUTE_SUCCESS_TEST, this::test1);
+        this.registerMethod("test1", this::test1);
+        this.registerMethod("test2", this::test1);
     }
 
 }
