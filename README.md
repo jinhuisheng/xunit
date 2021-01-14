@@ -47,5 +47,11 @@ getDeclaredMethods
 n. 
 Test Suite 测试套件
 
-    
+## 作业四 
+Setup和Teardown
+
+在测试之前，我们需要准备一些数据，设定当前程序的状态，以便符合测试方法对环境的要求。
+有些Setup改变了系统的状态，需要在结束之后调用TearDown方法消除状态。
+要求在每个测试方法开始之前，运行setup，在测试方法运行只有，运行tearDown。
+每一个TestCase都有自己的一个setup方法和tearDown方法。    
 
