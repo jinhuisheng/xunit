@@ -15,15 +15,23 @@ public class RTWTestCase {
 
     }
 
+    protected void tearDown() {
+
+    }
+
     public List<TestMethod> getDeclaredMethods() {
         return declaredMethods;
     }
 
     public List<TestResult> executeMethods() {
-        return this.declaredMethods.stream().map(declaredMethod -> {
-            setUp();
-            return declaredMethod.run();
-        }).collect(Collectors.toList());
+        return this.declaredMethods.stream().map(this::execute).collect(Collectors.toList());
+    }
+
+    private TestResult execute(TestMethod declaredMethod) {
+        setUp();
+        TestResult result = declaredMethod.run();
+        tearDown();
+        return result;
     }
 
 }
