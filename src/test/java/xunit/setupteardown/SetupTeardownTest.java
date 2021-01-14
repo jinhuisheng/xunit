@@ -10,11 +10,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class SetupTeardownTest {
     @Test
-    void should_set_up_one_String_property_used() {
+    void set_up_used() {
         HasSetupMethodTestCase hasSetupMethodTestCase = new HasSetupMethodTestCase();
         List<TestResult> testResults = hasSetupMethodTestCase.executeMethods();
-        assertThat(testResults.size()).isEqualTo(1);
-        assertThat(Constants.LIST.size()).isEqualTo(1);
+        assertThat(testResults.size()).isEqualTo(2);
+        assertThat(Constants.LIST.size()).isEqualTo(2);
     }
 
 }

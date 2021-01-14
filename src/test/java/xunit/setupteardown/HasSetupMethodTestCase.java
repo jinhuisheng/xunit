@@ -18,8 +18,13 @@ public class HasSetupMethodTestCase extends RTWTestCase {
         list.add("save1");
     }
 
+    public void save2() {
+        list.add("save2");
+    }
+
     public HasSetupMethodTestCase() {
         this.registerMethod("save1", this::save1);
+        this.registerMethod("save2", this::save2);
     }
 
 }

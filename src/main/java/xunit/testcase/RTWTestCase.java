@@ -20,8 +20,10 @@ public class RTWTestCase {
     }
 
     public List<TestResult> executeMethods() {
-        setUp();
-        return this.declaredMethods.stream().map(declaredMethod -> declaredMethod.run()).collect(Collectors.toList());
+        return this.declaredMethods.stream().map(declaredMethod -> {
+            setUp();
+            return declaredMethod.run();
+        }).collect(Collectors.toList());
     }
 
 }
