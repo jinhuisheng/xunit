@@ -1,6 +1,7 @@
 package xunit.setupteardown;
 
 import org.junit.jupiter.api.Test;
+import xunit.Constants;
 import xunit.testcase.TestResult;
 
 import java.util.List;
@@ -12,8 +13,8 @@ public class SetupTeardownTest {
     void should_set_up_one_String_property_used() {
         HasSetupMethodTestCase hasSetupMethodTestCase = new HasSetupMethodTestCase();
         List<TestResult> testResults = hasSetupMethodTestCase.executeMethods();
-        assertThat(testResults.size()).isEqualTo(2);
-        assertThat(testResults.get(0).getSuccess()).isEqualTo(true);
-        assertThat(testResults.get(1).getSuccess()).isEqualTo(true);
+        assertThat(testResults.size()).isEqualTo(1);
+        assertThat(Constants.LIST.size()).isEqualTo(1);
     }
+
 }

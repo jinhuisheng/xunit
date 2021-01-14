@@ -3,29 +3,23 @@ package xunit.setupteardown;
 import xunit.Constants;
 import xunit.testcase.RTWTestCase;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import java.util.List;
 
 public class HasSetupMethodTestCase extends RTWTestCase {
 
-    private String name;
+    private List<String> list;
 
     @Override
     protected void setUp() {
-        name = "setup";
+        list = Constants.LIST;
     }
 
-    public void test1() {
-        assertThat(name).isEqualTo("setup");
+    public void save1() {
+        list.add("save1");
     }
-
-    public void test2() {
-        assertThat(name).isEqualTo("setup");
-    }
-
 
     public HasSetupMethodTestCase() {
-        this.registerMethod("test1", this::test1);
-        this.registerMethod("test2", this::test1);
+        this.registerMethod("save1", this::save1);
     }
 
 }

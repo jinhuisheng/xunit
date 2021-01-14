@@ -55,3 +55,10 @@ Setup和Teardown
 要求在每个测试方法开始之前，运行setup，在测试方法运行只有，运行tearDown。
 每一个TestCase都有自己的一个setup方法和tearDown方法。    
 
+### 需求明确
+
+每个方法开始前都要运行setup
+每个方法结束结束时都要运行tearDown
+
+如何改变系统状态？全局的数据？
+
