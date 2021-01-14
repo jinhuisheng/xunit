@@ -21,7 +21,7 @@ public class SetupTeardownTest {
     void use_set_up_and_tear_down() {
         HasSetupAndTearDownMethodTestCase testCase = new HasSetupAndTearDownMethodTestCase();
         List<TestResult> testResults = testCase.executeMethods();
-        assertThat(testResults.size()).isEqualTo(1);
+        assertThat(testResults.size()).isEqualTo(2);
         assertThat(Constants.ANOTHER_LIST.size()).isEqualTo(0);
     }
 
