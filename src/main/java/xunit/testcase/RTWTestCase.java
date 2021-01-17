@@ -8,7 +8,7 @@ public class RTWTestCase {
     private List<TestMethod> declaredMethods = new ArrayList<>();
 
     protected void registerMethod(String name, Runnable method) {
-        declaredMethods.add(new TestMethod(name, method));
+        declaredMethods.add(new TestMethod(name, method, this::setUp, this::tearDown));
     }
 
     protected void setUp() {
@@ -24,14 +24,7 @@ public class RTWTestCase {
     }
 
     public List<TestResult> executeMethods() {
-        return this.declaredMethods.stream().map(this::execute).collect(Collectors.toList());
-    }
-
-    private TestResult execute(TestMethod declaredMethod) {
-        setUp();
-        TestResult result = declaredMethod.run();
-        tearDown();
-        return result;
+        return this.declaredMethods.stream().map(TestMethod::run).collect(Collectors.toList());
     }
 
 }
