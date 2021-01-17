@@ -1,9 +1,8 @@
-java -jar ./build/libs/xunit.jar
-echo $?
-if [ "$?" -ne "0" ]; 
+java -jar ./build/libs/xunit.jar xunit.MyTestSuite
+if [ "$?" -ne "0" ];
 then
-  echo "Execute Success"
-else 
   echo "Sorry,Test Failed"
+else
+  echo "Execute Success"
 fi
 
