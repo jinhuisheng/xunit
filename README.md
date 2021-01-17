@@ -72,4 +72,6 @@ Setup和Teardown
 ```shell script
 java -jar xunit.jar my.package.MyTestSuite
 ```
-
+### 拆分
+1、执行成功,打印日志
+2、执行失败,打印日志 并且 exit code 返回非0，终止后续脚本运行
