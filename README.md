@@ -62,3 +62,14 @@ Setup和Teardown
 
 如何改变系统状态？全局的数据？
 
+
+## 作业五
+
+有了测试类和测试套件，接下来我们希望把测试套件可以运行起来。
+通过一个Runner，指定给他一组套件，他就可以通过main方法运行这些套件，并在控制台上输出结果。
+如果有套件运行失败，main的exit code应该是非0，这样就可以和持续集成工具进行整合。
+
+```shell script
+java -jar xunit.jar my.package.MyTestSuite
+```
+
