@@ -1,0 +1,6 @@
+
+测试执行结果:
+
+测试类:xunit.MyTestCase:
+
+method:test1,result:true,msg:

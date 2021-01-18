@@ -16,6 +16,13 @@ jar {
     }
 }
 
+test {
+    testLogging {
+        events = ["passed", "failed", "skipped"]
+        showStandardStreams = true
+    }
+}
+
 dependencies {
     api 'org.apache.commons:commons-math3:3.6.1'
     implementation 'com.google.guava:guava:23.0'
